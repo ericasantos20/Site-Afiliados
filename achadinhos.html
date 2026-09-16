@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achadinhos da Nat — os melhores achados da Shopee, todo dia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #FFF8EC;
+    --paper: #FFFDF7;
+    --ink: #241220;
+    --coral: #FF4D6D;
+    --mustard: #FFB800;
+    --plum: #3A0F3F;
+    --teal: #0F6E5D;
+    --line: rgba(36,18,32,0.15);
+    --radius: 18px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Quicksand', sans-serif;
+    font-weight:500;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Anton', sans-serif;
+    font-weight:400;
+    letter-spacing:0.5px;
+    line-height:0.95;
+    text-transform:none;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px;}
+
+  /* focus visibility */
+  a:focus-visible, button:focus-visible{outline:3px solid var(--teal); outline-offset:3px;}
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+
+  /* NAV */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:var(--bg);
+    border-bottom:2px dashed var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 24px; max-width:1100px; margin:0 auto;
+  }
+  .logo{
+    font-family:'Anton', sans-serif;
+    font-size:24px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .logo span{color:var(--coral);}
+  .nav a.cta-nav{
+    background:var(--plum); color:#fff; padding:10px 20px;
+    border-radius:999px; text-decoration:none; font-weight:700; font-size:15px;
+  }
+
+  /* HERO */
+  .hero{
+    padding:64px 24px 40px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-inner{
+    max-width:1100px; margin:0 auto;
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:40px; align-items:center;
+  }
+  .eyebrow-tag{
+    display:inline-block;
+    background:var(--coral);
+    color: #fff;
+    padding:6px 16px;
+    border-radius:999px;
+    font-weight:700;
+    font-size:14px;
+    transform:rotate(-3deg);
+    margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:clamp(40px,6vw,68px);
+    color:var(--plum);
+  }
+  .hero h1 em{
+    font-style:normal;
+    color:var(--coral);
+  }
+  .hero p.lead{
+    font-size:19px; max-width:46ch; margin:20px 0 28px;
+    color:var(--ink);
+  }
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--coral); color:#fff; text-decoration:none;
+    padding:16px 30px; border-radius:12px; font-weight:700; font-size:17px;
+    box-shadow:5px 5px 0 var(--plum);
+    transition:transform .15s ease;
+  }
+  .btn-primary:hover{transform:translate(-2px,-2px);}
+  .btn-secondary{
+    background:transparent; color:var(--plum); text-decoration:none;
+    padding:16px 26px; border-radius:12px; font-weight:700; font-size:17px;
+    border:2px solid var(--plum);
+  }
+
+  /* price tag graphic */
+  .tag-stack{position:relative; height:340px;}
+  .price-tag{
+    position:absolute;
+    background:var(--paper);
+    border:2px solid var(--plum);
+    border-radius:16px;
+    padding:18px 22px;
+    box-shadow:6px 6px 0 rgba(58,15,63,0.15);
+  }
+  .price-tag .old{
+    text-decoration:line-through; opacity:.5; font-size:14px;
+  }
+  .price-tag .new{
+    font-family:'Anton',sans-serif; font-size:30px; color:var(--coral);
+  }
+  .price-tag .name{font-size:13px; font-weight:700; margin-bottom:4px;}
+  .tag-1{top:0; left:20px; transform:rotate(-6deg); width:200px;}
+  .tag-2{top:120px; right:0; transform:rotate(5deg); width:210px;}
+  .tag-3{bottom:0; left:60px; transform:rotate(-2deg); width:190px;}
+
+  /* MARQUEE */
+  .marquee-outer{
+    background:var(--plum); color:#fff;
+    overflow:hidden; white-space:nowrap;
+    padding:14px 0;
+    border-top:2px solid var(--ink); border-bottom:2px solid var(--ink);
+  }
+  .marquee-track{
+    display:inline-block;
+    animation:scroll 22s linear infinite;
+    font-family:'Anton', sans-serif; font-size:20px; letter-spacing:1px;
+  }
+  .marquee-track span{margin-right:40px;}
+  .marquee-track span.hl{color:var(--mustard);}
+  @keyframes scroll{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+
+  /* SECTION HEADS */
+  section{padding:72px 0;}
+  .section-head{max-width:640px; margin-bottom:44px;}
+  .section-head h2{font-size:clamp(30px,4vw,44px); color:var(--plum);}
+  .section-head p{font-size:17px; margin-top:10px;}
+
+  /* FILTERS */
+  .filters{
+    display:flex; flex-wrap:wrap; gap:10px; margin-bottom:32px;
+  }
+  .filter-btn{
+    background:var(--paper);
+    border:2px solid var(--ink);
+    color:var(--ink);
+    padding:9px 18px;
+    border-radius:999px;
+    font-weight:700; font-size:14px;
+    font-family:'Quicksand', sans-serif;
+    cursor:pointer;
+  }
+  .filter-btn.active{
+    background:var(--plum); border-color:var(--plum); color:#fff;
+  }
+  .card.hidden{display:none;}
+
+  /* PRODUCT GRID */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:24px;
+  }
+  .card{
+    background:var(--paper);
+    border-radius:var(--radius);
+    border:2px solid var(--ink);
+    overflow:hidden;
+    display:flex; flex-direction:column;
+    opacity: 0; 
+    transform: translateY(40px); 
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .card.visible {
+    opacity: 1;
+    transform: translateY(-10px);
+}
+  
+  .card:hover{transform:translateY(-4px);}
+  .card-img{
+    aspect-ratio:1/1;
+    background:linear-gradient(135deg,var(--mustard),var(--coral));
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Anton',sans-serif; color:#fff; font-size:15px; text-align:center; padding:12px;
+  }
+  .card-body{padding:16px 18px 20px; display:flex; flex-direction:column; gap:8px; flex:1;}
+  .card-body .cat{font-size:12px; font-weight:700; color:var(--teal);}
+  .card-body h3{font-size:18px; font-family:'Quicksand',sans-serif; font-weight:700; margin:0;}
+  .price-row{display:flex; align-items:baseline; gap:10px; margin-top:auto;}
+  .price-row .old{text-decoration:line-through; opacity:.5; font-size:14px;}
+  .price-row .new{font-family:'Anton',sans-serif; font-size:24px; color:var(--coral);}
+  .card-btn{
+    margin-top:10px; text-align:center; text-decoration:none;
+    background:var(--plum); color:#fff; padding:11px; border-radius:10px;
+    font-weight:700; font-size:14px;
+  }
+
+  /* HOW IT WORKS */
+  .steps{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:28px;
+  }
+  .step{
+    background:var(--paper); border-radius:var(--radius); border:2px dashed var(--line);
+    padding:26px;
+  }
+  .step .num{
+    font-family:'Anton',sans-serif; font-size:40px; color:var(--mustard);
+    -webkit-text-stroke:1.5px var(--plum);
+  }
+  .step h3{font-size:19px; margin:10px 0 8px;}
+  .step p{font-size:15px; margin:0;}
+
+  /* TESTIMONIALS */
+  .testi-wrap{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
+  }
+  .testi{
+    background:var(--plum); color:#fff; border-radius:var(--radius);
+    padding:26px;
+  }
+  .testi p{font-size:16px; line-height:1.5;}
+  .testi .who{margin-top:14px; font-weight:700; color:var(--mustard); font-size:14px;}
+
+  /* NEWSLETTER / CTA */
+  .cta-band{
+    background:var(--coral); color:#fff; text-align:center;
+    border-radius:24px; padding:56px 32px; margin:0 24px;
+  }
+  .cta-band h2{font-size:clamp(28px,4vw,42px); margin-bottom:12px;}
+  .cta-band p{font-size:17px; max-width:50ch; margin:0 auto 26px;}
+  .cta-band .btn-primary{background:var(--plum); box-shadow:5px 5px 0 var(--ink);}
+
+  /* FOOTER */
+  footer{
+    padding:40px 24px 30px; text-align:center;
+    font-size:13px; color:rgba(36,18,32,0.65);
+  }
+  footer .disclaimer{max-width:640px; margin:0 auto 14px;}
+  footer .social{margin-bottom:16px; display:flex; gap:16px; justify-content:center; font-weight:700;}
+  footer .social a{text-decoration:none; color:var(--plum);}
+
+  @media(max-width:800px){
+    .hero-inner{grid-template-columns:1fr;}
+    .tag-stack{height:260px; margin-top:20px;}
+    .steps, .testi-wrap{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">Achadinhos da Shopee</div>
+    <a class="cta-nav" href="#lista">Ver ofertas de hoje</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="eyebrow-tag">Confira</span>
+      <h1>Ache o achadinho<br>antes que <em>acabe</em>.</h1>
+      <p class="lead">Aqui você encontra os produtos mais baratos e bem avaliados da Shopee pra você não perder tempo comparando preço. Só clicar e comprar.</p>
+      <div class="hero-ctas">
+        <a href="#lista" class="btn-primary">Quero ver os achados</a>
+        <a href="#como-funciona" class="btn-secondary">Como funciona</a>
+      </div>
+    </div>
+    <div class="tag-stack" aria-hidden="true">
+      <div class="price-tag tag-1">
+        <div class="name">Organizador de gaveta</div>
+        <div class="old">R$ 39,90</div>
+        <div class="new">R$ 14,90</div>
+      </div>
+      <div class="price-tag tag-2">
+        <div class="name">Mini ventilador USB</div>
+        <div class="old">R$ 52,00</div>
+        <div class="new">R$ 23,90</div>
+      </div>
+      <div class="price-tag tag-3">
+        <div class="name">Suporte de celular</div>
+        <div class="old">R$ 28,00</div>
+        <div class="new">R$ 9,90</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="marquee-outer" aria-hidden="true">
+  <div class="marquee-track">
+    <span>📦 frete grátis em vários itens</span>
+    <span>✅ produtos bem avaliados</span>
+    <span>📦 frete grátis em vários itens</span>
+    <span>✅ produtos bem avaliados</span>
+  </div>
+</div>
+
+<section id="lista">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Achados por categoria</h2>
+      <p>Separei tudo por categoria pra você achar rapidinho o que precisa e o que nem sabia que precisava.</p>
+    </div>
+
+    <div class="filters" role="group" aria-label="Filtrar por categoria">
+      <button class="filter-btn active" data-filter="todos">Todos</button>
+      <button class="filter-btn" data-filter="casa">Casa</button>
+      <button class="filter-btn" data-filter="beleza">Beleza</button>
+      <button class="filter-btn" data-filter="tecnologia">Tecnologia</button>
+      <button class="filter-btn" data-filter="pet">Pet</button>
+      <button class="filter-btn" data-filter="cozinha">Cozinha</button>
+      <button class="filter-btn" data-filter="moda">Moda</button>
+      <button class="filter-btn" data-filter="bebe">Bebê</button>
+      <button class="filter-btn" data-filter="papelaria">Papelaria</button>
+      <button class="filter-btn" data-filter="fitness">Fitness</button>
+      <button class="filter-btn" data-filter="automotivo">Automotivo</button>
+      <button class="filter-btn" data-filter="jardim">Jardim</button>
+      <button class="filter-btn" data-filter="games">Games</button>
+      <button class="filter-btn" data-filter="escolar">Escolar</button>
+    </div>
+
+    <div class="grid">
+
+      <!--Casa-->
+      <div class="card" data-cat="casa">
+        <div class="card-img"><img src="Imagens/Kit com 2 prateleiras de madeira industrial.webp" alt="Kit com 2 prateleiras de madeira industrial"></div>
+        <div class="card-body">
+          <div class="cat">CASA</div>
+          <h3>Kit com 2 prateleiras de madeira industrial</h3>
+          <div class="price-row"><!--<span class="old">R$ 69,90</span>--><span class="new">R$ 22,32</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+      <div class="card" data-cat="casa">
+        <div class="card-img"><img src="Imagens/Manta Para Sofá Tipo Capa Decorativa Super King.webp" alt="Kit com 2 prateleiras de madeira industrial"></div>
+        <div class="card-body">
+          <div class="cat">CASA</div>
+          <h3>Manta Para Sofá Tipo Capa Decorativa Super King</h3>
+          <div class="price-row"><!--<span class="old">R$ 69,90</span>--><span class="new">R$ 24,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+      <div class="card" data-cat="casa">
+        <div class="card-img"><img src="Imagens/Torneira Gourmet com filtro luxo.webp" alt="Kit com 2 prateleiras de madeira industrial"></div>
+        <div class="card-body">
+          <div class="cat">CASA</div>
+          <h3>Torneira Gourmet Com Filtro Luxo</h3>
+          <div class="price-row"><!--<span class="old">R$ 69,90</span>--><span class="new">R$ 76,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+      <div class="card" data-cat="casa">
+        <div class="card-img"><img src="Imagens/Armário Espelheira com Porta Cleopatra - VÁRIAS CORES.webp" alt="Kit com 2 prateleiras de madeira industrial"></div>
+        <div class="card-body">
+          <div class="cat">CASA</div>
+          <h3>Armário Espelheira com Porta Cleopatra - VÁRIAS CORES</h3>
+          <div class="price-row"><!--<span class="old">R$ 69,90</span>--><span class="new">R$ 119,69</span><span style="color: #f6432e; font-family: normal 5px Arial; max-width: 110px; text-align: right;"><em>no Pix com cupom</em></span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+      <div class="card" data-cat="casa">
+        <div class="card-img"><img src="Imagens/Mop Giratório 8 Litros Fit Cesto Plástico Esfregão Microfibra Cabo Inox.webp" alt="Kit com 2 prateleiras de madeira industrial"></div>
+        <div class="card-body">
+          <div class="cat">CASA</div>
+          <h3>Mop Giratório 8 Litros Fit Cesto Plástico Esfregão Microfibra Cabo Inox</h3>
+          <div class="price-row"><!--<span class="old">R$ 69,90</span>--><span class="new">R$ 45,70</span><span style="color: #f6432e; font-family: normal 5px Arial; max-width: 110px; text-align: right;"><em>com cupom</em></span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+      <div class="card" data-cat="casa">
+        <div class="card-img"><img src="Imagens/Tapete de Banheiro Absorvente Antiderrapante Secagem Rápida.webp" alt="Kit com 2 prateleiras de madeira industrial"></div>
+        <div class="card-body">
+          <div class="cat">CASA</div>
+          <h3>Tapete de Banheiro Absorvente Antiderrapante Secagem Rápida</h3>
+          <div class="price-row"><!--<span class="old">R$ 69,90</span>--><span class="new">R$ 11,98</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+      <div class="card" data-cat="casa">
+        <div class="card-img"><img src="Imagens/Sapateira 4 ou 5 Andares Multiuso Desmontável Organizadora Multiuso Sapatos Livros Brinquedos.webp" alt="Kit com 2 prateleiras de madeira industrial"></div>
+        <div class="card-body">
+          <div class="cat">CASA</div>
+          <h3>Sapateira 4 ou 5 Andares Multiuso Desmontável Organizadora Multiuso (Sapatos, Livros, Brinquedos...)</h3>
+          <div class="price-row"><!--<span class="old">R$ 69,90</span>--><span class="new">R$ 18,98</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+      <div class="card" data-cat="casa">
+        <div class="card-img"><img src="Imagens/Boiserie Moldura Roda Meio Eva Autoadesivo Flexível Sirius 2,4cm x 1cm.webp" alt="Kit com 2 prateleiras de madeira industrial"></div>
+        <div class="card-body">
+          <div class="cat">CASA</div>
+          <h3>Boiserie Moldura Roda Meio Eva Autoadesivo Flexível Sirius 2,4cm x 1cm</h3>
+          <div class="price-row"><!--<span class="old">R$ 69,90</span>--><span class="new">R$ 28,90 - R$ 107,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+      <div class="card" data-cat="casa">
+        <div class="card-img"><img src="Imagens/Jogo 1 Ou 2 Lixeiras Inox 9L Tampa Click Moderna Compacta Cozinha Banheiro Premium Fácil Limpeza.webp" alt="Kit com 2 prateleiras de madeira industrial"></div>
+        <div class="card-body">
+          <div class="cat">CASA</div>
+          <h3>Jogo 1 Ou 2 Lixeiras Inox 9L Tampa Click Moderna</h3>
+          <div class="price-row"><!--<span class="old">R$ 69,90</span>--><span class="new">R$ 29,99</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="casa">
+        <div class="card-img">Casa &amp; Organização</div>
+        <div class="card-body">
+          <div class="cat">CASA</div>
+          <h3>Kit potes herméticos (10 peças)</h3>
+          <div class="price-row"><span class="old">R$ 69,90</span><span class="new">R$ 32,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="casa">
+        <div class="card-img">Casa &amp; Organização</div>
+        <div class="card-body">
+          <div class="cat">CASA</div>
+          <h3>Kit potes herméticos (10 peças)</h3>
+          <div class="price-row"><span class="old">R$ 69,90</span><span class="new">R$ 32,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="casa">
+        <div class="card-img">Casa &amp; Organização</div>
+        <div class="card-body">
+          <div class="cat">CASA</div>
+          <h3>Kit potes herméticos (10 peças)</h3>
+          <div class="price-row"><span class="old">R$ 69,90</span><span class="new">R$ 32,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="casa">
+        <div class="card-img">Casa &amp; Organização</div>
+        <div class="card-body">
+          <div class="cat">CASA</div>
+          <h3>Kit potes herméticos (10 peças)</h3>
+          <div class="price-row"><span class="old">R$ 69,90</span><span class="new">R$ 32,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="casa">
+        <div class="card-img">Casa &amp; Organização</div>
+        <div class="card-body">
+          <div class="cat">CASA</div>
+          <h3>Kit potes herméticos (10 peças)</h3>
+          <div class="price-row"><span class="old">R$ 69,90</span><span class="new">R$ 32,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="casa">
+        <div class="card-img">Casa &amp; Organização</div>
+        <div class="card-body">
+          <div class="cat">CASA</div>
+          <h3>Kit potes herméticos (10 peças)</h3>
+          <div class="price-row"><span class="old">R$ 69,90</span><span class="new">R$ 32,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+      <!--Beleza-->
+      <div class="card" data-cat="beleza">
+        <div class="card-img">Beleza</div>
+        <div class="card-body">
+          <div class="cat">BELEZA</div>
+          <h3>Escova secadora modeladora</h3>
+          <div class="price-row"><span class="old">R$ 149,90</span><span class="new">R$ 79,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="beleza">
+        <div class="card-img">Beleza</div>
+        <div class="card-body">
+          <div class="cat">BELEZA</div>
+          <h3>Escova secadora modeladora</h3>
+          <div class="price-row"><span class="old">R$ 149,90</span><span class="new">R$ 79,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="beleza">
+        <div class="card-img">Beleza</div>
+        <div class="card-body">
+          <div class="cat">BELEZA</div>
+          <h3>Escova secadora modeladora</h3>
+          <div class="price-row"><span class="old">R$ 149,90</span><span class="new">R$ 79,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="beleza">
+        <div class="card-img">Beleza</div>
+        <div class="card-body">
+          <div class="cat">BELEZA</div>
+          <h3>Escova secadora modeladora</h3>
+          <div class="price-row"><span class="old">R$ 149,90</span><span class="new">R$ 79,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="beleza">
+        <div class="card-img">Beleza</div>
+        <div class="card-body">
+          <div class="cat">BELEZA</div>
+          <h3>Escova secadora modeladora</h3>
+          <div class="price-row"><span class="old">R$ 149,90</span><span class="new">R$ 79,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="beleza">
+        <div class="card-img">Beleza</div>
+        <div class="card-body">
+          <div class="cat">BELEZA</div>
+          <h3>Escova secadora modeladora</h3>
+          <div class="price-row"><span class="old">R$ 149,90</span><span class="new">R$ 79,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="beleza">
+        <div class="card-img">Beleza</div>
+        <div class="card-body">
+          <div class="cat">BELEZA</div>
+          <h3>Escova secadora modeladora</h3>
+          <div class="price-row"><span class="old">R$ 149,90</span><span class="new">R$ 79,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="beleza">
+        <div class="card-img">Beleza</div>
+        <div class="card-body">
+          <div class="cat">BELEZA</div>
+          <h3>Escova secadora modeladora</h3>
+          <div class="price-row"><span class="old">R$ 149,90</span><span class="new">R$ 79,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="beleza">
+        <div class="card-img">Beleza</div>
+        <div class="card-body">
+          <div class="cat">BELEZA</div>
+          <h3>Escova secadora modeladora</h3>
+          <div class="price-row"><span class="old">R$ 149,90</span><span class="new">R$ 79,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="beleza">
+        <div class="card-img">Beleza</div>
+        <div class="card-body">
+          <div class="cat">BELEZA</div>
+          <h3>Escova secadora modeladora</h3>
+          <div class="price-row"><span class="old">R$ 149,90</span><span class="new">R$ 79,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="beleza">
+        <div class="card-img">Beleza</div>
+        <div class="card-body">
+          <div class="cat">BELEZA</div>
+          <h3>Escova secadora modeladora</h3>
+          <div class="price-row"><span class="old">R$ 149,90</span><span class="new">R$ 79,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="beleza">
+        <div class="card-img">Beleza</div>
+        <div class="card-body">
+          <div class="cat">BELEZA</div>
+          <h3>Escova secadora modeladora</h3>
+          <div class="price-row"><span class="old">R$ 149,90</span><span class="new">R$ 79,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="beleza">
+        <div class="card-img">Beleza</div>
+        <div class="card-body">
+          <div class="cat">BELEZA</div>
+          <h3>Escova secadora modeladora</h3>
+          <div class="price-row"><span class="old">R$ 149,90</span><span class="new">R$ 79,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="beleza">
+        <div class="card-img">Beleza</div>
+        <div class="card-body">
+          <div class="cat">BELEZA</div>
+          <h3>Escova secadora modeladora</h3>
+          <div class="price-row"><span class="old">R$ 149,90</span><span class="new">R$ 79,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="beleza">
+        <div class="card-img">Beleza</div>
+        <div class="card-body">
+          <div class="cat">BELEZA</div>
+          <h3>Escova secadora modeladora</h3>
+          <div class="price-row"><span class="old">R$ 149,90</span><span class="new">R$ 79,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+      <!--Tecnologia-->
+
+      <div class="card" data-cat="tecnologia">
+        <div class="card-img">Tech</div>
+        <div class="card-body">
+          <div class="cat">TECNOLOGIA</div>
+          <h3>Fone bluetooth com case</h3>
+          <div class="price-row"><span class="old">R$ 89,90</span><span class="new">R$ 38,00</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="tecnologia">
+        <div class="card-img">Tech</div>
+        <div class="card-body">
+          <div class="cat">TECNOLOGIA</div>
+          <h3>Fone bluetooth com case</h3>
+          <div class="price-row"><span class="old">R$ 89,90</span><span class="new">R$ 38,00</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="tecnologia">
+        <div class="card-img">Tech</div>
+        <div class="card-body">
+          <div class="cat">TECNOLOGIA</div>
+          <h3>Fone bluetooth com case</h3>
+          <div class="price-row"><span class="old">R$ 89,90</span><span class="new">R$ 38,00</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="tecnologia">
+        <div class="card-img">Tech</div>
+        <div class="card-body">
+          <div class="cat">TECNOLOGIA</div>
+          <h3>Fone bluetooth com case</h3>
+          <div class="price-row"><span class="old">R$ 89,90</span><span class="new">R$ 38,00</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="tecnologia">
+        <div class="card-img">Tech</div>
+        <div class="card-body">
+          <div class="cat">TECNOLOGIA</div>
+          <h3>Fone bluetooth com case</h3>
+          <div class="price-row"><span class="old">R$ 89,90</span><span class="new">R$ 38,00</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="tecnologia">
+        <div class="card-img">Tech</div>
+        <div class="card-body">
+          <div class="cat">TECNOLOGIA</div>
+          <h3>Fone bluetooth com case</h3>
+          <div class="price-row"><span class="old">R$ 89,90</span><span class="new">R$ 38,00</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="tecnologia">
+        <div class="card-img">Tech</div>
+        <div class="card-body">
+          <div class="cat">TECNOLOGIA</div>
+          <h3>Fone bluetooth com case</h3>
+          <div class="price-row"><span class="old">R$ 89,90</span><span class="new">R$ 38,00</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="tecnologia">
+        <div class="card-img">Tech</div>
+        <div class="card-body">
+          <div class="cat">TECNOLOGIA</div>
+          <h3>Fone bluetooth com case</h3>
+          <div class="price-row"><span class="old">R$ 89,90</span><span class="new">R$ 38,00</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="tecnologia">
+        <div class="card-img">Tech</div>
+        <div class="card-body">
+          <div class="cat">TECNOLOGIA</div>
+          <h3>Fone bluetooth com case</h3>
+          <div class="price-row"><span class="old">R$ 89,90</span><span class="new">R$ 38,00</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="tecnologia">
+        <div class="card-img">Tech</div>
+        <div class="card-body">
+          <div class="cat">TECNOLOGIA</div>
+          <h3>Fone bluetooth com case</h3>
+          <div class="price-row"><span class="old">R$ 89,90</span><span class="new">R$ 38,00</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+      <!--Pets-->
+
+      <div class="card" data-cat="pet">
+        <div class="card-img">Pet</div>
+        <div class="card-body">
+          <div class="cat">PET</div>
+          <h3>Comedouro automático pet</h3>
+          <div class="price-row"><span class="old">R$ 120,00</span><span class="new">R$ 64,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="pet">
+        <div class="card-img">Pet</div>
+        <div class="card-body">
+          <div class="cat">PET</div>
+          <h3>Comedouro automático pet</h3>
+          <div class="price-row"><span class="old">R$ 120,00</span><span class="new">R$ 64,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="pet">
+        <div class="card-img">Pet</div>
+        <div class="card-body">
+          <div class="cat">PET</div>
+          <h3>Comedouro automático pet</h3>
+          <div class="price-row"><span class="old">R$ 120,00</span><span class="new">R$ 64,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="pet">
+        <div class="card-img">Pet</div>
+        <div class="card-body">
+          <div class="cat">PET</div>
+          <h3>Comedouro automático pet</h3>
+          <div class="price-row"><span class="old">R$ 120,00</span><span class="new">R$ 64,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="pet">
+        <div class="card-img">Pet</div>
+        <div class="card-body">
+          <div class="cat">PET</div>
+          <h3>Comedouro automático pet</h3>
+          <div class="price-row"><span class="old">R$ 120,00</span><span class="new">R$ 64,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="pet">
+        <div class="card-img">Pet</div>
+        <div class="card-body">
+          <div class="cat">PET</div>
+          <h3>Comedouro automático pet</h3>
+          <div class="price-row"><span class="old">R$ 120,00</span><span class="new">R$ 64,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="pet">
+        <div class="card-img">Pet</div>
+        <div class="card-body">
+          <div class="cat">PET</div>
+          <h3>Comedouro automático pet</h3>
+          <div class="price-row"><span class="old">R$ 120,00</span><span class="new">R$ 64,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="pet">
+        <div class="card-img">Pet</div>
+        <div class="card-body">
+          <div class="cat">PET</div>
+          <h3>Comedouro automático pet</h3>
+          <div class="price-row"><span class="old">R$ 120,00</span><span class="new">R$ 64,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="pet">
+        <div class="card-img">Pet</div>
+        <div class="card-body">
+          <div class="cat">PET</div>
+          <h3>Comedouro automático pet</h3>
+          <div class="price-row"><span class="old">R$ 120,00</span><span class="new">R$ 64,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="pet">
+        <div class="card-img">Pet</div>
+        <div class="card-body">
+          <div class="cat">PET</div>
+          <h3>Comedouro automático pet</h3>
+          <div class="price-row"><span class="old">R$ 120,00</span><span class="new">R$ 64,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+      <!--Cozinha-->
+
+      <div class="card" data-cat="cozinha">
+        <div class="card-img">Cozinha</div>
+        <div class="card-body">
+          <div class="cat">COZINHA</div>
+          <h3>Espremedor de frutas manual</h3>
+          <div class="price-row"><span class="old">R$ 45,00</span><span class="new">R$ 19,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="cozinha">
+        <div class="card-img">Cozinha</div>
+        <div class="card-body">
+          <div class="cat">COZINHA</div>
+          <h3>Espremedor de frutas manual</h3>
+          <div class="price-row"><span class="old">R$ 45,00</span><span class="new">R$ 19,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="cozinha">
+        <div class="card-img">Cozinha</div>
+        <div class="card-body">
+          <div class="cat">COZINHA</div>
+          <h3>Espremedor de frutas manual</h3>
+          <div class="price-row"><span class="old">R$ 45,00</span><span class="new">R$ 19,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="cozinha">
+        <div class="card-img">Cozinha</div>
+        <div class="card-body">
+          <div class="cat">COZINHA</div>
+          <h3>Espremedor de frutas manual</h3>
+          <div class="price-row"><span class="old">R$ 45,00</span><span class="new">R$ 19,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="cozinha">
+        <div class="card-img">Cozinha</div>
+        <div class="card-body">
+          <div class="cat">COZINHA</div>
+          <h3>Espremedor de frutas manual</h3>
+          <div class="price-row"><span class="old">R$ 45,00</span><span class="new">R$ 19,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="cozinha">
+        <div class="card-img">Cozinha</div>
+        <div class="card-body">
+          <div class="cat">COZINHA</div>
+          <h3>Espremedor de frutas manual</h3>
+          <div class="price-row"><span class="old">R$ 45,00</span><span class="new">R$ 19,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="cozinha">
+        <div class="card-img">Cozinha</div>
+        <div class="card-body">
+          <div class="cat">COZINHA</div>
+          <h3>Espremedor de frutas manual</h3>
+          <div class="price-row"><span class="old">R$ 45,00</span><span class="new">R$ 19,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="cozinha">
+        <div class="card-img">Cozinha</div>
+        <div class="card-body">
+          <div class="cat">COZINHA</div>
+          <h3>Espremedor de frutas manual</h3>
+          <div class="price-row"><span class="old">R$ 45,00</span><span class="new">R$ 19,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="cozinha">
+        <div class="card-img">Cozinha</div>
+        <div class="card-body">
+          <div class="cat">COZINHA</div>
+          <h3>Espremedor de frutas manual</h3>
+          <div class="price-row"><span class="old">R$ 45,00</span><span class="new">R$ 19,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="cozinha">
+        <div class="card-img">Cozinha</div>
+        <div class="card-body">
+          <div class="cat">COZINHA</div>
+          <h3>Espremedor de frutas manual</h3>
+          <div class="price-row"><span class="old">R$ 45,00</span><span class="new">R$ 19,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="cozinha">
+        <div class="card-img">Cozinha</div>
+        <div class="card-body">
+          <div class="cat">COZINHA</div>
+          <h3>Espremedor de frutas manual</h3>
+          <div class="price-row"><span class="old">R$ 45,00</span><span class="new">R$ 19,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="cozinha">
+        <div class="card-img">Cozinha</div>
+        <div class="card-body">
+          <div class="cat">COZINHA</div>
+          <h3>Espremedor de frutas manual</h3>
+          <div class="price-row"><span class="old">R$ 45,00</span><span class="new">R$ 19,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="cozinha">
+        <div class="card-img">Cozinha</div>
+        <div class="card-body">
+          <div class="cat">COZINHA</div>
+          <h3>Espremedor de frutas manual</h3>
+          <div class="price-row"><span class="old">R$ 45,00</span><span class="new">R$ 19,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="cozinha">
+        <div class="card-img">Cozinha</div>
+        <div class="card-body">
+          <div class="cat">COZINHA</div>
+          <h3>Espremedor de frutas manual</h3>
+          <div class="price-row"><span class="old">R$ 45,00</span><span class="new">R$ 19,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="cozinha">
+        <div class="card-img">Cozinha</div>
+        <div class="card-body">
+          <div class="cat">COZINHA</div>
+          <h3>Espremedor de frutas manual</h3>
+          <div class="price-row"><span class="old">R$ 45,00</span><span class="new">R$ 19,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="cozinha">
+        <div class="card-img">Cozinha</div>
+        <div class="card-body">
+          <div class="cat">COZINHA</div>
+          <h3>Espremedor de frutas manual</h3>
+          <div class="price-row"><span class="old">R$ 45,00</span><span class="new">R$ 19,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+      <!--Moda-->
+
+      <div class="card" data-cat="moda">
+        <div class="card-img">Moda</div>
+        <div class="card-body">
+          <div class="cat">MODA</div>
+          <h3>Bolsa transversal impermeável</h3>
+          <div class="price-row"><span class="old">R$ 79,90</span><span class="new">R$ 41,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="moda">
+        <div class="card-img">Moda</div>
+        <div class="card-body">
+          <div class="cat">MODA</div>
+          <h3>Bolsa transversal impermeável</h3>
+          <div class="price-row"><span class="old">R$ 79,90</span><span class="new">R$ 41,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="moda">
+        <div class="card-img">Moda</div>
+        <div class="card-body">
+          <div class="cat">MODA</div>
+          <h3>Bolsa transversal impermeável</h3>
+          <div class="price-row"><span class="old">R$ 79,90</span><span class="new">R$ 41,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="moda">
+        <div class="card-img">Moda</div>
+        <div class="card-body">
+          <div class="cat">MODA</div>
+          <h3>Bolsa transversal impermeável</h3>
+          <div class="price-row"><span class="old">R$ 79,90</span><span class="new">R$ 41,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="moda">
+        <div class="card-img">Moda</div>
+        <div class="card-body">
+          <div class="cat">MODA</div>
+          <h3>Bolsa transversal impermeável</h3>
+          <div class="price-row"><span class="old">R$ 79,90</span><span class="new">R$ 41,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="moda">
+        <div class="card-img">Moda</div>
+        <div class="card-body">
+          <div class="cat">MODA</div>
+          <h3>Bolsa transversal impermeável</h3>
+          <div class="price-row"><span class="old">R$ 79,90</span><span class="new">R$ 41,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="moda">
+        <div class="card-img">Moda</div>
+        <div class="card-body">
+          <div class="cat">MODA</div>
+          <h3>Bolsa transversal impermeável</h3>
+          <div class="price-row"><span class="old">R$ 79,90</span><span class="new">R$ 41,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="moda">
+        <div class="card-img">Moda</div>
+        <div class="card-body">
+          <div class="cat">MODA</div>
+          <h3>Bolsa transversal impermeável</h3>
+          <div class="price-row"><span class="old">R$ 79,90</span><span class="new">R$ 41,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="moda">
+        <div class="card-img">Moda</div>
+        <div class="card-body">
+          <div class="cat">MODA</div>
+          <h3>Bolsa transversal impermeável</h3>
+          <div class="price-row"><span class="old">R$ 79,90</span><span class="new">R$ 41,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="moda">
+        <div class="card-img">Moda</div>
+        <div class="card-body">
+          <div class="cat">MODA</div>
+          <h3>Bolsa transversal impermeável</h3>
+          <div class="price-row"><span class="old">R$ 79,90</span><span class="new">R$ 41,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+      <!--Infantil-->
+
+      <div class="card" data-cat="bebe">
+        <div class="card-img">Bebê &amp; Infantil</div>
+        <div class="card-body">
+          <div class="cat">BEBÊ</div>
+          <h3>Mobile musical para berço</h3>
+          <div class="price-row"><span class="old">R$ 65,00</span><span class="new">R$ 29,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="bebe">
+        <div class="card-img">Bebê &amp; Infantil</div>
+        <div class="card-body">
+          <div class="cat">BEBÊ</div>
+          <h3>Mobile musical para berço</h3>
+          <div class="price-row"><span class="old">R$ 65,00</span><span class="new">R$ 29,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="bebe">
+        <div class="card-img">Bebê &amp; Infantil</div>
+        <div class="card-body">
+          <div class="cat">BEBÊ</div>
+          <h3>Mobile musical para berço</h3>
+          <div class="price-row"><span class="old">R$ 65,00</span><span class="new">R$ 29,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="bebe">
+        <div class="card-img">Bebê &amp; Infantil</div>
+        <div class="card-body">
+          <div class="cat">BEBÊ</div>
+          <h3>Mobile musical para berço</h3>
+          <div class="price-row"><span class="old">R$ 65,00</span><span class="new">R$ 29,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="bebe">
+        <div class="card-img">Bebê &amp; Infantil</div>
+        <div class="card-body">
+          <div class="cat">BEBÊ</div>
+          <h3>Mobile musical para berço</h3>
+          <div class="price-row"><span class="old">R$ 65,00</span><span class="new">R$ 29,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="bebe">
+        <div class="card-img">Bebê &amp; Infantil</div>
+        <div class="card-body">
+          <div class="cat">BEBÊ</div>
+          <h3>Mobile musical para berço</h3>
+          <div class="price-row"><span class="old">R$ 65,00</span><span class="new">R$ 29,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="bebe">
+        <div class="card-img">Bebê &amp; Infantil</div>
+        <div class="card-body">
+          <div class="cat">BEBÊ</div>
+          <h3>Mobile musical para berço</h3>
+          <div class="price-row"><span class="old">R$ 65,00</span><span class="new">R$ 29,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="bebe">
+        <div class="card-img">Bebê &amp; Infantil</div>
+        <div class="card-body">
+          <div class="cat">BEBÊ</div>
+          <h3>Mobile musical para berço</h3>
+          <div class="price-row"><span class="old">R$ 65,00</span><span class="new">R$ 29,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="bebe">
+        <div class="card-img">Bebê &amp; Infantil</div>
+        <div class="card-body">
+          <div class="cat">BEBÊ</div>
+          <h3>Mobile musical para berço</h3>
+          <div class="price-row"><span class="old">R$ 65,00</span><span class="new">R$ 29,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="bebe">
+        <div class="card-img">Bebê &amp; Infantil</div>
+        <div class="card-body">
+          <div class="cat">BEBÊ</div>
+          <h3>Mobile musical para berço</h3>
+          <div class="price-row"><span class="old">R$ 65,00</span><span class="new">R$ 29,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="bebe">
+        <div class="card-img">Bebê &amp; Infantil</div>
+        <div class="card-body">
+          <div class="cat">BEBÊ</div>
+          <h3>Mobile musical para berço</h3>
+          <div class="price-row"><span class="old">R$ 65,00</span><span class="new">R$ 29,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="bebe">
+        <div class="card-img">Bebê &amp; Infantil</div>
+        <div class="card-body">
+          <div class="cat">BEBÊ</div>
+          <h3>Mobile musical para berço</h3>
+          <div class="price-row"><span class="old">R$ 65,00</span><span class="new">R$ 29,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="bebe">
+        <div class="card-img">Bebê &amp; Infantil</div>
+        <div class="card-body">
+          <div class="cat">BEBÊ</div>
+          <h3>Mobile musical para berço</h3>
+          <div class="price-row"><span class="old">R$ 65,00</span><span class="new">R$ 29,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="bebe">
+        <div class="card-img">Bebê &amp; Infantil</div>
+        <div class="card-body">
+          <div class="cat">BEBÊ</div>
+          <h3>Mobile musical para berço</h3>
+          <div class="price-row"><span class="old">R$ 65,00</span><span class="new">R$ 29,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="bebe">
+        <div class="card-img">Bebê &amp; Infantil</div>
+        <div class="card-body">
+          <div class="cat">BEBÊ</div>
+          <h3>Mobile musical para berço</h3>
+          <div class="price-row"><span class="old">R$ 65,00</span><span class="new">R$ 29,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="bebe">
+        <div class="card-img">Bebê &amp; Infantil</div>
+        <div class="card-body">
+          <div class="cat">BEBÊ</div>
+          <h3>Mobile musical para berço</h3>
+          <div class="price-row"><span class="old">R$ 65,00</span><span class="new">R$ 29,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+      <!--Papelaria-->
+
+      <div class="card" data-cat="papelaria">
+        <div class="card-img">Papelaria</div>
+        <div class="card-body">
+          <div class="cat">PAPELARIA</div>
+          <h3>Kit canetas + planner semanal</h3>
+          <div class="price-row"><span class="old">R$ 34,90</span><span class="new">R$ 15,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+            <div class="card" data-cat="papelaria">
+        <div class="card-img">Papelaria</div>
+        <div class="card-body">
+          <div class="cat">PAPELARIA</div>
+          <h3>Kit canetas + planner semanal</h3>
+          <div class="price-row"><span class="old">R$ 34,90</span><span class="new">R$ 15,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+      
+            <div class="card" data-cat="papelaria">
+        <div class="card-img">Papelaria</div>
+        <div class="card-body">
+          <div class="cat">PAPELARIA</div>
+          <h3>Kit canetas + planner semanal</h3>
+          <div class="price-row"><span class="old">R$ 34,90</span><span class="new">R$ 15,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+      
+            <div class="card" data-cat="papelaria">
+        <div class="card-img">Papelaria</div>
+        <div class="card-body">
+          <div class="cat">PAPELARIA</div>
+          <h3>Kit canetas + planner semanal</h3>
+          <div class="price-row"><span class="old">R$ 34,90</span><span class="new">R$ 15,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="papelaria">
+        <div class="card-img">Papelaria</div>
+        <div class="card-body">
+          <div class="cat">PAPELARIA</div>
+          <h3>Kit canetas + planner semanal</h3>
+          <div class="price-row"><span class="old">R$ 34,90</span><span class="new">R$ 15,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="papelaria">
+        <div class="card-img">Papelaria</div>
+        <div class="card-body">
+          <div class="cat">PAPELARIA</div>
+          <h3>Kit canetas + planner semanal</h3>
+          <div class="price-row"><span class="old">R$ 34,90</span><span class="new">R$ 15,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+
+      <!--Fitness-->
+
+
+      <div class="card" data-cat="fitness">
+        <div class="card-img">Fitness</div>
+        <div class="card-body">
+          <div class="cat">FITNESS</div>
+          <h3>Faixa elástica para exercícios (kit 5)</h3>
+          <div class="price-row"><span class="old">R$ 42,00</span><span class="new">R$ 18,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="fitness">
+        <div class="card-img">Fitness</div>
+        <div class="card-body">
+          <div class="cat">FITNESS</div>
+          <h3>Faixa elástica para exercícios (kit 5)</h3>
+          <div class="price-row"><span class="old">R$ 42,00</span><span class="new">R$ 18,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="fitness">
+        <div class="card-img">Fitness</div>
+        <div class="card-body">
+          <div class="cat">FITNESS</div>
+          <h3>Faixa elástica para exercícios (kit 5)</h3>
+          <div class="price-row"><span class="old">R$ 42,00</span><span class="new">R$ 18,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="fitness">
+        <div class="card-img">Fitness</div>
+        <div class="card-body">
+          <div class="cat">FITNESS</div>
+          <h3>Faixa elástica para exercícios (kit 5)</h3>
+          <div class="price-row"><span class="old">R$ 42,00</span><span class="new">R$ 18,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="fitness">
+        <div class="card-img">Fitness</div>
+        <div class="card-body">
+          <div class="cat">FITNESS</div>
+          <h3>Faixa elástica para exercícios (kit 5)</h3>
+          <div class="price-row"><span class="old">R$ 42,00</span><span class="new">R$ 18,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+      <div class="card" data-cat="automotivo">
+        <div class="card-img">Carro</div>
+        <div class="card-body">
+          <div class="cat">AUTOMOTIVO</div>
+          <h3>Suporte veicular para celular</h3>
+          <div class="price-row"><span class="old">R$ 38,00</span><span class="new">R$ 16,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+      <div class="card" data-cat="jardim">
+        <div class="card-img">Jardim</div>
+        <div class="card-body">
+          <div class="cat">JARDIM</div>
+          <h3>Kit vasos autoirrigáveis (3 peças)</h3>
+          <div class="price-row"><span class="old">R$ 56,00</span><span class="new">R$ 27,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+      <!--Games-->
+
+      <div class="card" data-cat="games">
+        <div class="card-img">Games</div>
+        <div class="card-body">
+          <div class="cat">GAMES</div>
+          <h3>Controle sem fio compatível com PC</h3>
+          <div class="price-row"><span class="old">R$ 99,90</span><span class="new">R$ 54,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="games">
+        <div class="card-img">Games</div>
+        <div class="card-body">
+          <div class="cat">GAMES</div>
+          <h3>Controle sem fio compatível com PC</h3>
+          <div class="price-row"><span class="old">R$ 99,90</span><span class="new">R$ 54,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="games">
+        <div class="card-img">Games</div>
+        <div class="card-body">
+          <div class="cat">GAMES</div>
+          <h3>Controle sem fio compatível com PC</h3>
+          <div class="price-row"><span class="old">R$ 99,90</span><span class="new">R$ 54,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="games">
+        <div class="card-img">Games</div>
+        <div class="card-body">
+          <div class="cat">GAMES</div>
+          <h3>Controle sem fio compatível com PC</h3>
+          <div class="price-row"><span class="old">R$ 99,90</span><span class="new">R$ 54,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="games">
+        <div class="card-img">Games</div>
+        <div class="card-body">
+          <div class="cat">GAMES</div>
+          <h3>Controle sem fio compatível com PC</h3>
+          <div class="price-row"><span class="old">R$ 99,90</span><span class="new">R$ 54,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="games">
+        <div class="card-img">Games</div>
+        <div class="card-body">
+          <div class="cat">GAMES</div>
+          <h3>Controle sem fio compatível com PC</h3>
+          <div class="price-row"><span class="old">R$ 99,90</span><span class="new">R$ 54,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="games">
+        <div class="card-img">Games</div>
+        <div class="card-body">
+          <div class="cat">GAMES</div>
+          <h3>Controle sem fio compatível com PC</h3>
+          <div class="price-row"><span class="old">R$ 99,90</span><span class="new">R$ 54,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+            <div class="card" data-cat="games">
+        <div class="card-img">Games</div>
+        <div class="card-body">
+          <div class="cat">GAMES</div>
+          <h3>Controle sem fio compatível com PC</h3>
+          <div class="price-row"><span class="old">R$ 99,90</span><span class="new">R$ 54,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+      <div class="card" data-cat="escolar">
+        <div class="card-img">Papelaria Kids</div>
+        <div class="card-body">
+          <div class="cat">ESCOLAR</div>
+          <h3>Estojo com 24 canetinhas coloridas</h3>
+          <div class="price-row"><span class="old">R$ 25,00</span><span class="new">R$ 11,90</span></div>
+          <a href="#" class="card-btn">Ver na Shopee</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="como-funciona" style="background:var(--paper); border-top:2px dashed var(--line); border-bottom:2px dashed var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Como funciona</h2>
+      <p>Simples assim — sem cadastro, sem enrolação.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Você navega pelos achados</h3>
+        <p>Escolho os produtos, comparo preço e leio as avaliações antes de postar aqui.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Clica no que gostou</h3>
+        <p>O link te leva direto pra página do produto na Shopee, com o preço já aplicado.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Compra com segurança</h3>
+        <p>A compra é feita direto no app oficial da Shopee. Eu só te ajudo a achar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Quem já comprou, aprovou</h2>
+    </div>
+    <div class="testi-wrap">
+      <div class="testi">
+        <p>Achei um organizador de gaveta por menos de R$15 que eu já ia pagar R$40 em outro lugar. Salvou minha cozinha.</p>
+        <div class="who">— Camila R.</div>
+      </div>
+      <div class="testi">
+        <p>Sigo as postagens toda manhã antes de sair pro trabalho. Já economizei bastante seguindo as dicas.</p>
+        <div class="who">— Juliana M.</div>
+      </div>
+      <div class="testi">
+        <p>Gosto porque ela só posta coisa com nota boa. Já evitei comprar porcaria mais de uma vez.</p>
+        <div class="who">— Patrícia S.</div>
+      </div>
+    </div>
+  </div>
+</section>-->
+
+<section>
+  <div class="cta-band">
+    <h2>Não perca o próximo achadinho</h2>
+    <p>Me siga no Instagram pra receber os achados assim que eu posto.</p>
+    <div class="hero-ctas" style="justify-content:center;">
+      <!--<a href="#" class="btn-primary">Entrar no grupo do WhatsApp</a>-->
+      <a href="#" class="btn-primary">Seguir no Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="social">
+    <a href="#">Instagram</a>
+    <!--<a href="#">TikTok</a>
+    <a href="#">WhatsApp</a>-->
+  </div>
+  <p class="disclaimer">Este site contém links de afiliada. Ao comprar através de um dos links, posso receber uma pequena comissão da Shopee, sem custo adicional para você.</p>
+  <p>© 2026 Achadinhos da Nat. Feito com carinho pra quem ama uma promoção.</p>
+</footer>
+
+<script>
+  (function(){
+    var buttons = document.querySelectorAll('.filter-btn');
+    var cards = document.querySelectorAll('.card[data-cat]');
+    buttons.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        buttons.forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        var filter = btn.getAttribute('data-filter');
+        cards.forEach(function(card){
+          if(filter === 'todos' || card.getAttribute('data-cat') === filter){
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  })();
+
+// 1. Cria o observador com uma função de callback
+const observer = new IntersectionObserver(function (entries) {
+
+    entries.forEach(function (entry) {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add('visible');
+
+        } else {
+
+            entry.target.classList.remove('visible');
+
+        }
+
+    });
+
+});
+// 2. Manda o observador vigiar cada elemento .card
+document.querySelectorAll('.card').forEach(function (el) {
+
+observer.observe(el);
+});
+
+
+
+</script>
+</body>
+</html>
